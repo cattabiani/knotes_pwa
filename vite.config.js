@@ -12,18 +12,18 @@ export default defineConfig({
         enabled: true,
       },
       manifest: {
-        name: 'Knotes PA',
-        short_name: 'Knotes',
+        name: 'kNotes',  // Updated app name
+        short_name: 'kNotes',  // Updated short name
         description: 'A simple note-taking app',
         theme_color: '#ffffff',
         icons: [
           {
-            src: 'pwa-192x192.png',
+            src: '/knotes_pwa/pwa-192x192.png',  // Use repo path for GitHub Pages
             sizes: '192x192',
             type: 'image/png',
           },
           {
-            src: 'pwa-512x512.png',
+            src: '/knotes_pwa/pwa-512x512.png',  // Use repo path for GitHub Pages
             sizes: '512x512',
             type: 'image/png',
           },
@@ -31,4 +31,5 @@ export default defineConfig({
       },
     }),
   ],
+  base: '/knotes_pwa/',  // This is required for GitHub Pages to serve the correct paths
 });
